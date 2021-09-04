@@ -1,0 +1,152 @@
+/*Seleciona para todos os elementos*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Define a fonte de todos os elementos*/
+
+*,
+input,
+button {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/*Header*/
+
+.menu {
+  /*Deixa em formato de linha*/
+  display: flex;
+  height: 40px;
+  width: 100%;
+  /*Poderia usar?? alinhou na direita*/
+  position: absolute;
+  width: 225px;
+  margin-top: 5px;
+  right: 0px;
+}
+
+/*Menu Esquerda*/
+
+.menu__link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #757575;
+  padding: 12px 8px;
+}
+
+
+
+/*Menu direita*/
+
+.menu__section {
+  display: flex;
+  align-items: center;
+}
+
+.menu__section .menu__icon {
+  padding: 12px;
+}
+
+.menu__profile {
+  padding: 4px;
+  width: 40px;
+  height: 40px;
+  
+}
+
+.menu__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+/*Main*/
+/*logo*/
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 40px 40px 40px;
+}
+
+.content__logo {
+  height: 200px;
+}
+/*Barra pesquisa*/
+.content__search {
+  margin-top: 18px;
+  width: 100%;
+  max-width: 40%;
+  padding: 7px 10px 6px 20px;
+  font-size: 18px;
+  color: rgba (0, 0, 0, 0.87);
+  background: transparent;
+  border-radius: 25px;
+  border: 1px solid #dadce0;
+  outline: 0ch;
+}
+/*borda laranja ao clicar*/
+.content__search:focus {
+  border: 1px solid orange;
+}
+
+/*Botões*/
+input {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #2c2929;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.footer {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  background: #f2f2f2;
+}
+/*borda só apartir do segundo item*/
+.footer__section:not(:first-child) {
+  border-top: 1px solid #cac8c8;
+}
+
+.footer__location {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 10px 12px;
+  background-color: #e4e4e4;
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: #6b6969;
+  padding: 10px;
+  background-color: #e4e4e4;
+}
+
+.footer__links a:not(:first-child) {
+  margin-left: 27px;
+}

@@ -1,0 +1,9 @@
+body{
+    background-color: yellow;
+}
+
+img{
+  display: inline;  
+  width: 450px;
+  height: 450px;
+}
