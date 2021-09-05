@@ -1,9 +1,80 @@
-body{
-    background-color: yellow;
+body {
+  background-color: yellow;
+}
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  color: brown;
+  text-align: center;
+}
+h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  text-align: left;
+  text-decoration: underline;
+}
+p {
+  font-size: 15px;
+}
+.bt {
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 2px black;
+  margin-top: 20px;
+  background-image: url(../img/avc.png);
+  background-position: center;
+  background-size: 25px;
+  cursor: pointer;
+}
+.btn {
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 2px black;
+  margin-top: 20px;
+  background-image: url(../img/perg.jpg);
+  background-position: center;
+  background-size: 25px;
+  cursor: pointer;
+}
+.cal {
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  border: solid 2px black;
+  background-color: blueviolet;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.pa {
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  border: solid 2px black;
+  background-color: blueviolet;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.snome {
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  border: solid 2px black;
+  background-color: blueviolet;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
-img{
-  display: inline;  
+img {
+  display: inline;
   width: 450px;
   height: 450px;
+ 
+  
+}
+.center{
+  text-align: center;
+}
+.text {
+  width: 600px;
+  font-size: 15px;
 }
