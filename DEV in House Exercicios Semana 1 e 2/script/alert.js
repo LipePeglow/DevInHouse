@@ -4,5 +4,5 @@ alert(
 const pNome = prompt("Digite seu nome:", "Nome");
 alert("Olá, " + pNome + "  ");
 
-let data = new Date();
+const data = new Date();
 alert(data)
