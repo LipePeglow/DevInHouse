@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou Impar</title>
+</head>
+
+<body>
+    Numero:<input id="num" type="number"> <br />
+    <button onclick="paridade()">Resposta</button><br />
+
+    Resposta: <div id='resposta' style='display:inline'></div>
+
+    <script type="text/javascript">
+        function paridade() {
+            var num = parseInt(document.getElementById("num").value);
+            var resposta = document.getElementById('resposta');
+
+            if (num % 2 == 0)
+                resposta.innerHTML = "Par";
+            else
+                resposta.innerHTML = "Ímpar";
+        }
+    </script>
+
+    </script>
+</body>
+
+</html>
