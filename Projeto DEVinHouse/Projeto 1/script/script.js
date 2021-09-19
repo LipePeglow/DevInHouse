@@ -8,6 +8,12 @@ const todoItemsList = document.querySelector('.todo-items');
 
 // array que armazena cada todos.
 let todos = [];
+let id = localStorage.getItem("id")
+if (id === null) {
+  id = 0;
+}else{
+  id = parseInt(id)
+}
 
 // Add um eventListener no form, e lista para submit. 
 todoForm.addEventListener('submit', function (event) {
@@ -22,12 +28,15 @@ function addTodo(item) {
     alert("Didite uma tarefa!!!")
   } else {
     const todo = {
+      id: id,
       name: item,
       completed: false
     };
     todos.push(todo);
-    addToLocalStorage(todos);
+    id++
+ addToLocalStorage(todos);
     todoInput.value = '';
+
   }
 }
 
@@ -45,7 +54,7 @@ function renderTodos(todos) {
     const li = document.createElement('li');
     // <li class="item"> </li>
     li.setAttribute('class', 'item');
-    li.setAttribute('data-key', item.name);
+    li.setAttribute('data-key', item.id);
     // Se o item for concluído, adicione uma classe a <li> chamada <li> chamada 'checked', que adicionará o line-through.
     if (item.completed === true) {
       li.classList.add('checked');
@@ -65,6 +74,7 @@ function renderTodos(todos) {
 function addToLocalStorage(todos) {
   //Converta o array em string e armazene-o.
   localStorage.setItem('todos', JSON.stringify(todos));
+  localStorage.setItem("id",id)
   //Renderiza na tela.
   renderTodos(todos);
 }
@@ -81,9 +91,9 @@ function getFromLocalStorage() {
 }
 
 //Alternar o valor para concluído e não concluído
-function toggle(name) {
+function toggle(id) {
   todos.forEach(function (item) {
-    if (item.name == name) {
+    if (item.id == id) {
       //Alternar o valor 
       item.completed = !item.completed;
     }
@@ -93,12 +103,12 @@ function toggle(name) {
 }
 
 //Exclui um todo do array todos, em seguida, atualiza o localstorage e renderiza a lista atualizada para a tela.
-function deleteTodo(name) {
+function deleteTodo(id) {
   var confirmar = confirm("Deseja excluir o item?");
   if (confirmar) {
     // filtra o <li> com o id e atualiza o array todos
     todos = todos.filter(function (item) {
-      return item.name != name;
+      return item.id != id;
     });
 
     //Atualizar localStorage
