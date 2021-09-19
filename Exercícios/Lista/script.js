@@ -27,8 +27,8 @@ function carregarLista() {
     if (localStorage.hasOwnProperty('lista')) {
     document.querySelector("#lista").innerHTML = ""
     let arrayJSON = localStorage.getItem('lista')
-    let listasalva = JSON.parse(arrayJSON)
-    for (const unidade of listasalva) {
+    let listaSalva = JSON.parse(arrayJSON)
+    for (const unidade of listaSalva) {
         let lista = document.querySelector("#lista")
         let option = document.createElement("option")
         lista.appendChild(option)

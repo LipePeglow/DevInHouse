@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEVinHouse Projeto 01</title>
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/style/style.css">
+    <title>To do List-DEVinHouse</title>
 </head>
-<body onload="load()">
+
+<body>
     <div class="container">
-      <header>
-        <h1>Lista de Afazeres</h1>
-      </header>
-      <main>
-        <div>
-          <input type="text" placeholder="Digite uma tarefa..." />
-          <button onclick="">Adicionar</button>
-        </div>
-        <div>
-          <ul id="toDoList"></ul>
-        </div>
-      </main>
+        <header>
+            <h1>Lista de Afazeres</h1>
+            <p>Desenvolvido por Felipe Peglow Moraes</p>
+        </header>
+        <main>
+            <form class="todo-form">
+                <input type="text" class="todo-input" placeholder="Adicione uma Tarefa...">
+                <button type="submit" class="add-button">Adicionar</button>
+            </form>
+            <ul class="todo-items">
+            </ul>
+        </main>
     </div>
-  </body>
+    <script src="/script/script.js"></script>
+</body>
+
 </html>
